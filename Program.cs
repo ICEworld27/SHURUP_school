@@ -8,33 +8,36 @@ namespace Classi5
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            List<int> s = new List<int> {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0 };
             Student z;
             Random rnd = new Random();
+            int s;
+            int g = 0;
             for (int i = 0; i < s.Count; i++)
             {
                 int r = rnd.Next(1, 2);
                 if (r == 1)
                 {
                     z = new Boy();
-                    s[i] = z.DoExercise();
+                    s = z.DoExercise();
+                    if (s >= 20)
+                    {
+                        g++;
+                    }
                 }
                 else
                 {
                     z = new Girl();
-                    s[i] = z.DoExercise();
+                    s = z.DoExercise();
+                    if (s >= 20)
+                    {
+                        g++;
+                    }
                 }
+                Console.WriteLine(g + " человек сдал(и) зачёт");
 
-            }
-            int g = 0;
-            for (int i = 0; i < s.Count; i++)
-            {
-                if (s[i] >= 20)
-                {
-                    g++;
-                }
             }
 
         }
     }
 }
+
