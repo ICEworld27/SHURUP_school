@@ -12,21 +12,21 @@ namespace Classi5
             Random rnd = new Random();
             int s;
             int g = 0;
-            for (int i = 0; i < s; i++)
+            for (int i = 0; i < 25; i++)
             {
                 int r = rnd.Next(1, 2);
                 if (r == 1)
                 {
                     z = new Boy();
-                    s = z.DoExercise();
                     
                 }
                 else
                 {
                     z = new Girl();
-                    s = z.DoExercise();
+                    
 
                 }
+                s = z.DoExercise();
                 if (s >= 20)
                 {
                     g++;
