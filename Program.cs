@@ -12,31 +12,29 @@ namespace Classi5
             Random rnd = new Random();
             int s;
             int g = 0;
-            for (int i = 0; i < s.Count; i++)
+            for (int i = 0; i < s; i++)
             {
                 int r = rnd.Next(1, 2);
                 if (r == 1)
                 {
                     z = new Boy();
                     s = z.DoExercise();
-                    if (s >= 20)
-                    {
-                        g++;
-                    }
+                    
                 }
                 else
                 {
                     z = new Girl();
                     s = z.DoExercise();
-                    if (s >= 20)
-                    {
-                        g++;
-                    }
+
                 }
-                Console.WriteLine(g + " человек сдал(и) зачёт");
+                if (s >= 20)
+                {
+                    g++;
+                }
+                
 
             }
-
+            Console.WriteLine(g + " человек сдал(и) зачёт");
         }
     }
 }
