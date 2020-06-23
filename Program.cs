@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 
 namespace Classi5
@@ -24,7 +24,17 @@ namespace Classi5
                     z = new Girl();
                     s[i] = z.DoExercise();
                 }
+
             }
+            int g = 0;
+            for (int i = 0; i < s.Count; i++)
+            {
+                if (s[i] >= 20)
+                {
+                    g++;
+                }
+            }
+
         }
     }
 }
